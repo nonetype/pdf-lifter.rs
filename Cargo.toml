@@ -1,0 +1,22 @@
+[package]
+name = "pdf-lifter"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+include = [
+    "src/**/*.rs",
+    "tests/**/*.rs",
+    "Cargo.toml",
+    "README.md",
+]
+
+[lib]
+name = "pdf_lifter"
+path = "src/lib.rs"
+crate-type = ["lib"]
+test = true
+
+[dependencies]
+pdf-parser = { path="../LibAFL/fuzzers/PDFuzzer/parser" }
