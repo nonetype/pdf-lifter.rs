@@ -19,4 +19,4 @@ crate-type = ["lib"]
 test = true
 
 [dependencies]
-pdf-parser = { path="../LibAFL/fuzzers/PDFuzzer/parser" }
+pdf-parser = { git="https://github.com/nonetype/pdf-parser.rs.git"}
