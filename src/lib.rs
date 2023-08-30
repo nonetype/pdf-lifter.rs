@@ -1,18 +1,9 @@
-mod lifter;
-use pdf_parser::object::PDF;
-
-// This package is called `pdf-lifter`.
-// This library lifts the internal PDF structure of pdf-parser into PDF.
-
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub mod lifter;
 
 #[cfg(test)]
 mod tests {
     use crate::lifter::Liftable;
-
-    use super::*;
+    use pdf_parser::object::PDF;
     use std::{fs::File, io::Read};
 
     #[test]
@@ -28,6 +19,5 @@ mod tests {
         // pdf_bytes to String
         let pdf_string = String::from_utf8(pdf_bytes).unwrap();
         println!("pdf_string: \n{}", pdf_string);
-        
     }
 }
